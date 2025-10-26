@@ -1,4 +1,4 @@
-# Program Name: AB.py 
+# Program Name: programA.py 
 # Course: IT3883/Section W02
 # Student Name: Anthony Giso
 # Assignment Number: 4
