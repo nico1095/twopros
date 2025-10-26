@@ -8,8 +8,6 @@
 
 
 import socket
-
-
 HOST = '127.0.0.1'  
 PORT = 40001        
 
@@ -19,12 +17,9 @@ server_socket.bind((HOST, PORT))
 server_socket.listen(1)
 
 print(f"Program B (Server) listening on {HOST}:{PORT}...")
-
 # programA connected
 conn, addr = server_socket.accept()
 print(f"Connected by {addr}")
-
-
 data = conn.recv(1024)
 if data:
     received_text = data.decode()
@@ -32,8 +27,6 @@ if data:
 
    
     response = received_text.upper()
-
-    
     conn.sendall(response.encode())
     print(f"message sent back to programA: {response}")
 
