@@ -28,7 +28,7 @@ print(f"Connected by {addr}")
 data = conn.recv(1024)
 if data:
     received_text = data.decode()
-    print(f"message sent back to programA: {received_text}")
+    print(f"message received from programA: {received_text}")
 
    
     response = received_text.upper()
