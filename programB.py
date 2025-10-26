@@ -28,14 +28,14 @@ print(f"Connected by {addr}")
 data = conn.recv(1024)
 if data:
     received_text = data.decode()
-    print(f"Received from Program A: {received_text}")
+    print(f"message sent back to programA: {received_text}")
 
    
     response = received_text.upper()
 
     
     conn.sendall(response.encode())
-    print(f"Sent back to Program A: {response}")
+    print(f"message sent back to programA: {response}")
 
 # Close and exit connnection
 conn.close()
