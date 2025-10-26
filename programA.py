@@ -9,7 +9,7 @@ import socket
 
 
 HOST = '127.0.0.1'
-PORT = 40001
+PORT = 40005
 
 # makes tcp
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -17,11 +17,7 @@ client_socket.connect((HOST, PORT))
 
 # string input
 message = input("Enter message to send to programB ")
-
-
 client_socket.sendall(message.encode())
-
-
 response = client_socket.recv(1024)
 print(f"message sent back from programB: {response.decode()}")
 
