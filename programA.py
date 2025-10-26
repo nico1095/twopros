@@ -16,14 +16,14 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((HOST, PORT))
 
 # string input
-message = input("Send message for programB ")
+message = input("Enter message to send to programB ")
 
 
 client_socket.sendall(message.encode())
 
 
 response = client_socket.recv(1024)
-print(f"message from programB: {response.decode()}")
+print(f"message sent back from programB: {response.decode()}")
 
 
 client_socket.close()
